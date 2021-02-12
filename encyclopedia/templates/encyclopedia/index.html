@@ -1,0 +1,35 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Wikiball
+{% endblock %}
+
+{% block search %}
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary btn-sm" type="submit" id="search_btn">Search</button>
+</form>
+{% endblock %}
+
+{% block body %}
+<div class="index">
+    <h1>Latest articles</h1>
+    <ul>
+        {% for entry in entries %}
+            <a href="{{entry}}"><li>{{ entry }}</li></a>
+        {% endfor %}
+        <div class="go_to_all_articles"><a href="{% url 'articles' %}"><li>All articles >>></li></a></div>
+    </ul>
+</div>
+<div class="presentation">
+    <img src="{% static 'encyclopedia/images/Wikiball.png'%}" alt="pokeball with wikipedia logo" title="wikiball"/>
+    <div>
+        <p class="wikiball"><i>Wikiball is an open source minimalistic web encyclopedia designed for general porpuses. Its concept is based in give people an user-friendly self-designed general knowledge database using generic Markdown language.</i></p>
+        <b><p>Feel free to edit its content as pleased, help us improve it!</p>
+        <p>Read Documentation <a href="#">here</a>.</p>
+        <p> Developed by <a href="https://github.com/Locurin">Locurin</a> with <a href="https://www.djangoproject.com/">Django</a>.</p></b>
+    </div>
+</div>
+{% endblock %}

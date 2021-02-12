@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Edit | Wikiball
+{% endblock %}
+
+
+{% block body %}
+<div class="textarea_container">
+    <h1>Edit article</h1>
+    <p><b>This wiki use Markdown language to build its entries. Learn more <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">here</a>.</b></p>
+    <form action="{% url 'edited' %}" method="post">
+        {% csrf_token %}
+            <div class="textarea_title">{% render_field form3.new_title  %}</div>
+            <div class="textarea_field">{% render_field form3.edited_entry  %}</div>
+            <div class="textarea_btn"><button class="btn btn-primary" type="submit">Save changes</button></div>
+    </form>
+</div>
+{% endblock %}

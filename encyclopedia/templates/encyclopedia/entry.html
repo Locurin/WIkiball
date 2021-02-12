@@ -1,0 +1,33 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title|safe}} | Wikiball
+{% endblock %}
+
+{% block search %}
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary btn-sm" type="submit" id="search_btn">Search</button>
+</form>
+{% endblock %}
+
+{% block body %}
+<div class="container4">
+    <div class="entry_text">{{entry|safe}}</div>
+    <div class="edit_btn">
+        <form action="{% url 'edit' %}" method="post" class="entry_btn">
+            {% csrf_token %}
+            <input type="hidden" name="hidden_title" value="{{title|safe}}">
+            <button class="btn btn-primary"  type="submit">Edit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+

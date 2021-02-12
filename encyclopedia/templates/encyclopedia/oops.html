@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Oops | Wikiball
+{% endblock %}
+
+{% block search %}
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary btn-sm" type="submit" id="search_btn">Search</button>
+</form>
+{% endblock %}
+
+{% block body %}
+<div class="container2">
+    <h1>Oops!</h1>
+    <p>It seems an article with the same title already exist.</p> 
+    <p>If you feel it can be improved feel free to edit it!</p>
+    <button class="btn btn-primary"><a href="{% url 'index' %}">Back to main menu</a></button>&nbsp;&nbsp;
+    <button class="btn btn-primary"><a href="{% url 'new' %}">Back to new article</a></button>
+</div>
+{% endblock %}

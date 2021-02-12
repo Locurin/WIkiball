@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Article not found | Wikiball
+{% endblock %}
+
+{% block search %}
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary btn-sm" type="submit" id="search_btn">Search</button>
+</form>
+{% endblock %}
+
+{% block body %}
+<div class="container2">
+    <h1><b>Error 404: Not Found</b></h1>
+    <h3>Such entry is not in our wiki. Sorry!</h3>
+    <button class="btn btn-primary"><a href="{% url 'index' %}">Back to main menu</a></button>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "encyclopedia/search.html" %}
+
+
+{% block div %}
+   <h1>Perhaps you were looking for...</h1>
+    <div class="looking_for">
+        <ul>
+            {% for title in titles %}
+                <a href="../wiki/{{title}}/"><li>{{ title }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

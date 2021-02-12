@@ -1,0 +1,313 @@
+body {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+#navbarNav {
+    text-align: center;
+    margin-top: 0%;
+}
+
+.searchbar {
+    text-align: center;
+    margin-top: 2%;
+}
+
+#search_btn {
+    font-size: 15px;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    margin: 0%;
+}
+
+.index {
+    float:left;
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.index h1 {
+    margin-left: 3%;
+}
+
+.go_to_all_articles {
+    margin-top: 3%;
+}
+
+.go_to_all_articles a li {
+    list-style-type: none;
+    font-size: 32px;
+}
+
+.presentation {
+    float: right;
+    width: 45%;
+    margin-right: 5%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.wikiball {
+    text-align: justify;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.presentation img {
+    margin-bottom: 5%;
+}
+
+.container4 {
+    width: 100%;
+    margin-top:3%;
+}
+
+.entry_text {
+    margin-left: 5%;
+}
+
+.entry_btn {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.container2 {
+    width: 100%;
+    margin-top:7%;
+    text-align: center;
+}
+
+.container2 button {
+    margin-top: 10%;
+}
+
+.container2 button a {
+    color: white;
+    text-decoration: none;
+}
+
+.looking_for {
+    width: 50%;
+    margin-left: 35%;
+    margin-right: 15%;
+    text-align: left;
+    margin-top:3%;
+}
+
+.looking_for a li {
+    margin-top: 1%;
+}
+
+.textarea_container {
+    width: 100%;
+    margin-top:3%;
+    text-align: center;
+}
+
+.textarea_btn {
+    margin-bottom: 5%;
+}
+
+.textarea_title {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.textarea_title input {
+    width: 70%;
+}
+
+.textarea_field {
+    margin-bottom: 2%;
+}
+
+.textarea_field textarea {
+    width: 80%;
+    height: 20em;
+}
+
+.web_container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content_wrap {
+    padding-bottom: 2rem;
+}
+
+.article_list {
+    width: 100%;
+    margin-top:3%;
+    text-align: center;
+}
+
+.list_ofarticles {
+    text-align: left;
+    margin-top: 3%;
+}
+
+.list_ofarticles h1 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.col {
+    margin-bottom: 3%;
+}
+
+#catalog_index {
+    margin-left: 5%;
+}
+
+.catalog {
+    margin-bottom: 2%;
+}
+
+.mobile {
+    display: none;
+}
+
+
+footer {
+    position: absolute;
+    background-color: #f9f9f9;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    clear: both;
+    line-height: 2rem;
+    color: gray;
+  }
+
+footer a {
+    color: gray;
+}
+
+
+
+/*media queries*/
+
+/*mobile*/
+@media screen and (max-width: 599px) {
+
+    #navbarNav {
+        text-align: left;
+    }
+
+    .searchbar {
+        margin-top: 10%;
+    }
+
+    #search_btn {
+        margin-bottom: 1%;
+    }
+
+    .index {
+        float:none;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 10%;
+    }
+
+    .index h1 {
+        margin-left: 15%;
+    }
+
+    .index ul {
+        margin-left:10%;
+    }
+
+    .presentation {
+        float: none;
+        width:100%;
+        margin-right: 0%;
+    }
+
+    .container4 {
+        margin-left: 0%;
+        margin-top: 10%;
+    }
+
+    .entry_btn {
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .container2 {
+        margin-left: 0%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .looking_for {
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 0%;
+        text-align: left;
+        margin-top:10%;
+    }
+
+    .looking_for a li {
+        margin-top: 2%;
+    }
+
+    .textarea_title input {
+        width: 80%;
+    }
+    
+    .textarea_field {
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+    
+    .textarea_field textarea {
+        width: 90%;
+        height: 25em;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    #catalog_index {
+        margin-left: 0%;
+    }
+
+    footer {
+        display: none;
+    }
+
+
+}
+
+/*medium screens*/
+@media screen and (max-width: 800px) {
+    
+    #navbarNav {
+        text-align: left;
+    }
+    .container2 button {
+        margin-top: 7%;
+    }
+
+    .looking_for {
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 15%;
+        text-align: left;
+        margin-top:5%;
+    }
+
+}

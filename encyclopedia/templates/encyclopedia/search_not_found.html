@@ -1,0 +1,9 @@
+{% extends "encyclopedia/search.html" %}
+
+
+{% block div %}
+   <h1>Sorry!</h1>
+   <p>No entry in our wiki match your request.</p> 
+   <p>Please try again!</p>
+   <button class="btn btn-primary"><a href="{% url 'index' %}">Back to main menu</a></button>
+{% endblock %}

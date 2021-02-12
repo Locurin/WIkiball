@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+{% load widget_tweaks %}
+
+
+{% block title %}
+    New article | Wikiball
+{% endblock %}
+
+{% block body %}
+<div class="textarea_container">
+    <h1>Create a new entry for our wiki!</h1>
+    <p><b>This wiki use Markdown language to build its entries. Learn more <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">here</a>.</b></p>
+    <form action="{% url 'new' %}" method="post">
+        {% csrf_token %}
+        <div class="textarea_title">{% render_field form2.title  %}</div>
+        <div class="textarea_field">{% render_field form2.new_entry  %}</div>
+        <div class="textarea_btn"><button class="btn btn-primary" type="submit">Post new article</button></div>
+    </form>
+</div>
+{% endblock %}

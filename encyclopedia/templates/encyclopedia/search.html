@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Search | Wikiball
+{% endblock %}
+
+{% block search %}
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary btn-sm" type="submit" id="search_btn">Search</button>
+</form>
+{% endblock %}
+
+{% block body %}
+    <div class="container2">
+        {% block div %}{% endblock %}
+    </div>
+{% endblock %}

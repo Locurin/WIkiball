@@ -1,0 +1,83 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+{% include 'encyclopedia/css/styles.css' %} 
+
+{% block title %}
+    Wikiball | List of articles
+{% endblock %}
+
+{% block search %}
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary btn-sm" type="submit" id="search_btn">Search</button>
+</form>
+{% endblock %}
+
+{% block body %}
+<div class="list_ofarticles">
+    <h1>List of articles</h1>
+    <ul class="desktop">
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col" id="catalog_index">
+                    <div class="catalog"><b>A - G:</b></div>
+                    {% for entry in Column1 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>
+                <div class="col">
+                    <div class="catalog"><b>H - N:</b></div>
+                    {% for entry in Column2 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>    
+                <div class="col">
+                    <div class="catalog"><b>O - T:</b></div>
+                    {% for entry in Column3 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>
+                <div class="col">
+                    <div class="catalog"><b>U - Z:</b></div>
+                    {% for entry in Column4 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>
+            </div>
+        </div>
+    </ul>
+    <ul class="mobile">
+        <div class="container-fluid">
+            <div class="row row-cols-2 align-items-start">
+                <div class="col" id="catalog_index">
+                    <div class="catalog"><b>A - G:</b></div>
+                    {% for entry in Column1 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>
+                <div class="col">
+                    <div class="catalog"><b>H - N:</b></div>
+                    {% for entry in Column2 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>    
+                <div class="col">
+                    <div class="catalog"><b>O - T:</b></div>
+                    {% for entry in Column3 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>
+                <div class="col">
+                    <div class="catalog"><b>U - Z:</b></div>
+                    {% for entry in Column4 %}
+                        <a href="{{entry}}"><li>{{ entry }}</li></a>
+                    {% endfor %} 
+                </div>
+            </div>
+        </div>
+    </ul>
+</div>
+
+{% endblock %}
+
