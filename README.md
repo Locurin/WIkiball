@@ -1,6 +1,6 @@
 # Wikiball - Markdown encyclopedia app
 
-Wikiball's execution example available at (https://wikiball.pythonanywhere.com/)
+Wikiball's execution example available at https://wikiball.pythonanywhere.com/
 
 ## Table of contents
 
