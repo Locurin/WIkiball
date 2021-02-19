@@ -17,6 +17,7 @@ import csv
 Renders wiki's index with lastest articles added displayed
 """
 def index(request):
+    # open Newest Entries database and read lastest 10 to the template
     with open('Newest_Entries.csv', mode="r") as titles:
         titles_clean = titles.read()
         titles_list = titles_clean.split()
@@ -24,6 +25,7 @@ def index(request):
         LastestTen = []
         for names in titles_list[:10]:
             LastestTen.append(names)
+        # if Newest Entries database is too big, clean it
         if len(titles_list) > 100:
             CleanCVS(LastestTen) 
     return render(request, "encyclopedia/index.html", {"entries": LastestTen, "form":SearchForm()})
@@ -101,6 +103,7 @@ def new_entry(request):
                 return render(request, "encyclopedia/oops.html", {"form":SearchForm()})
             else:
                 util.save_entry(title, content)
+                # update Newest Entries database to show in index
                 LastEntriesUpdate(title)
                 return entries(request, title)
         # if invalid or GET request, redirect to new entry again
@@ -142,6 +145,7 @@ def edit(request):
 Renders wiki's complete list of articles
 """
 def articles(request):
+    # Organize every article in wiki in 4 columns sorted by alphabetical order, then render it 
     articles_list = util.list_entries()
     AtoG = ["A", "B", "C", "D", "E", "F", "G"]
     HtoN = ["H", "I", "J", "K", "L", "M", "N"]
@@ -160,7 +164,6 @@ def articles(request):
 
 #auxialiary functions
 
-
 """
 Opens csv file with lastest articles submitted and write new article's title to bottom of it
 """
@@ -171,6 +174,9 @@ def LastEntriesUpdate(title):
         writer = csv.writer(NewestEntries, delimiter=",")
         writer.writerow(csvtitle)
 
+"""
+Cleans Newest Entries database when too big, leaving just the lastest ten
+"""
 def CleanCVS(new_list):
     with open('Newest_Entries.csv', mode="w") as NewestEntries:
         for titles in range(len(new_list)):
