@@ -27,7 +27,7 @@ Wikiball is fully responsive, working both in mobile and desktop. It displays an
 
 ## Implementation 
 
-Wikiball is an open source project, so everyone interesed can download all its features from Github [here](https://github.com/Locurin/Wikiball). The same way, users are invited to improve its features or fully customize its look with HTML/CSS to fit their needs for implementation. Wikiball is built using Python's framework Django. 
+Wikiball is an open source project, so everyone interesed can download all its features from Github [here](https://github.com/locurin/Wikiball). The same way, users are invited to improve its features or fully customize its look with HTML/CSS to fit their needs for implementation. Wikiball is built using Python's framework Django. 
 
 *To learn how to deploy your costume version of the app into the web visit [Django Docs regarding the issue](https://docs.djangoproject.com/en/3.1/howto/deployment/).
 *REMEMBER: go to **settings.py** >> and add the following line ```ALLOWED_HOSTS = ['<web_host_name>']``` to said file to allow our chosen host so it can run our code.
@@ -83,5 +83,5 @@ This is version 1 of Wikiball, uploaded to Github in february 2021. Future versi
 
 ## Credits
 
-This project was built by [Locurin](https://github.com/Locurin) for Github as a personal project. You can also contact me at **matiasfefernandez95@gmail.com**. 
+This project was built by [Locurin](https://github.com/locurin) for Github as a personal project. You can also contact me at **matiasfefernandez95@gmail.com**. 
 
