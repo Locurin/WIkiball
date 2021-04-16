@@ -4,17 +4,17 @@ Wikiball's execution example available at https://wikiball.pythonanywhere.com/
 
 ## Table of contents
 
-*[General info](#general-info)
+* [General info](#general-info)
 
-*[implementation](#implementation)
+* [implementation](#implementation)
 
-*[Technologies](#technologies)
+* [Technologies](#technologies)
 
-*[functionalities](#functionalities)
+* [functionalities](#functionalities)
 
-*[version](#version)
+* [version](#version)
 
-*[credits](#credits)
+* [credits](#credits)
 
 
 ## General info
@@ -29,21 +29,21 @@ Wikiball is fully responsive, working both in mobile and desktop. It displays an
 
 Wikiball is an open source project, so everyone interesed can download all its features from Github [here](https://github.com/locurin/Wikiball). The same way, users are invited to improve its features or fully customize its look with HTML/CSS to fit their needs for implementation. Wikiball is built using Python's framework Django. 
 
-*To learn how to deploy your costume version of the app into the web visit [Django Docs regarding the issue](https://docs.djangoproject.com/en/3.1/howto/deployment/).
-*REMEMBER: go to **settings.py** >> and add the following line ```ALLOWED_HOSTS = ['<web_host_name>']``` to said file to allow our chosen host so it can run our code.
-*REMEMBER: All urls in **views.py** may need to be changed according the implementation the user decide to use to match correct paths of the host. 
+* To learn how to deploy your costume version of the app into the web visit [Django Docs regarding the issue](https://docs.djangoproject.com/en/3.1/howto/deployment/).
+* REMEMBER: go to **settings.py** >> and add the following line ```ALLOWED_HOSTS = ['<web_host_name>']``` to said file to allow our chosen host so it can run our code.
+* REMEMBER: All urls in **views.py** may need to be changed according the implementation the user decide to use to match correct paths of the host. 
 
 
 
 ## Technologies
 
-*[Bootstrap](https://getbootstrap.com/) v.5-0.0-beta2
+* [Bootstrap](https://getbootstrap.com/) v.5-0.0-beta2
 
-*[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
+* [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
 
-*[Django](https://www.djangoproject.com/) v.3.1.6
+* [Django](https://www.djangoproject.com/) v.3.1.6
 
-*[Python](https://www.python.org/) v.3.9.1
+* [Python](https://www.python.org/) v.3.9.1
 
 
 
@@ -83,5 +83,5 @@ This is version 1 of Wikiball, uploaded to Github in february 2021. Future versi
 
 ## Credits
 
-This project was built by [Locurin](https://github.com/locurin) for Github as a personal project. You can also contact me at **matiasfefernandez95@gmail.com**. 
+This project was built by [locurin](https://github.com/locurin) for Github as a personal project. You can also contact me at **matiasfefernandez95@gmail.com**. 
 
